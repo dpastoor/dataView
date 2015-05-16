@@ -4,7 +4,11 @@ shinyServer(function(input, output, session) {
     rdsData <- NULL
     if (is.null(rdsData)) {
         rdsData <- Theoph
+        if(!file.exists('data.rds')) {
+            saveRDS(Theoph, 'data.rds')
+        }
     }
+    
     rdsData <- reactiveFileReader(1000, session, 'data.rds', readRDS)
     observe({
             updateCheckboxGroupInput(session, 'show_vars', 'Columns in data set to show:',

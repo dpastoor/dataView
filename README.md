@@ -33,6 +33,12 @@ If you feed it bad data, it will likely crash. If it becomes unresponsive, just 
 
 ### TODO:
 
+* Add button to uncheck all columns
 * Add `sleep` so it consumes less resources will still remaining active - though polling once per second should have minimal CPU load
 * Add a file navigator to allow selection of other data in the file-system
 * Add ability to watch multiple datasets/folder and render any/all in a folder
+
+
+### Known bugs:
+
+For columns of type `hms` will show the underlying value (eg seconds since midnight), rather than the human readable printed result (eg 27000 rather than 7:30:00)

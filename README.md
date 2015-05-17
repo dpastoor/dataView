@@ -26,6 +26,7 @@ It looks like:
 
 Current functionality is limited to sorting (color changes on sorted column) as well as basic filtering via Search
 
+![example-filter-sort](assets/example-filter-sort.png)
 
 ### note about crashing
 

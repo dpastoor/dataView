@@ -12,7 +12,7 @@ shinyUI(fluidPage(
         mainPanel(
             tabsetPanel(
                 id = 'dataset',
-                tabPanel('data', dataTableOutput('mytable1'))
+                tabPanel('data', DT::dataTableOutput('mytable1'))
             )
         )
     )

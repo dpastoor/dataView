@@ -12,9 +12,10 @@ shinyServer(function(input, output, session) {
     
     rdsData <- reactiveFileReader(1000, session, 'data.rds', readRDS)
     observe({
-            updateCheckboxGroupInput(session, 'show_vars', 'Columns in data set to show:',
-                                 choices =  names(rdsData()), 
-                                 selected =  names(rdsData()))
+        col_names <- names(rdsData())
+        updateCheckboxGroupInput(session, 'show_vars', 'Columns in data set to show:',
+                             choices =  col_names, 
+                             selected =  col_names)
         
     })
     # a large table, reative to input$show_vars
